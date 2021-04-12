@@ -1,17 +1,12 @@
-# Course: CS261 - Data Structures
-# Assignment: 5.2
-# Student: Corey McFarland
+# Name: Corey McFarland
 # Description: To implement a MinHeap
 
-
-# Import pre-written DynamicArray and LinkedList classes
-from a5_include import *
+from helpers import *
 import random
 
 class MinHeapException(Exception):
     """
     Custom exception to be used by MinHeap class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     pass
 
@@ -20,7 +15,6 @@ class MinHeap:
     def __init__(self, start_heap=None):
         """
         Initializes a new MinHeap
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.heap = DynamicArray()
 
@@ -33,14 +27,12 @@ class MinHeap:
     def __str__(self) -> str:
         """
         Return MH content in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return 'HEAP ' + str(self.heap)
 
     def is_empty(self) -> bool:
         """
         Return True if no elements in the heap, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.heap.length() == 0
 

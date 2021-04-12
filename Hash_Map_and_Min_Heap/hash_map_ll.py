@@ -1,8 +1,7 @@
 
-# hash_map.py
 # ===================================================
 # Name: Corey McFarland
-# Implement a hash map with chaining
+# Implement a hash map with chaining and linked lists
 # ===================================================
 
 class SLNode:

@@ -1,17 +1,13 @@
-# Course: CS261 - Data Structures
-# Assignment: 5.1
-# Student: Corey McFarland
-# Description: To implement a Hash Map
-
+# Name: Corey McFarland
+# Description: To implement a Hash Map with dynamic arrays.
 
 # Import pre-written DynamicArray and LinkedList classes
-from a5_include import *
+from helpers import *
 
 
 def hash_function_1(key: str) -> int:
     """
-    Sample Hash function #1 to be used with A5 HashMap implementation
-    DO NOT CHANGE THIS FUNCTION IN ANY WAY
+    Sample Hash function #1 to be used with Helpers HashMap implementation
     """
     hash = 0
     for letter in key:
@@ -21,8 +17,7 @@ def hash_function_1(key: str) -> int:
 
 def hash_function_2(key: str) -> int:
     """
-    Sample Hash function #2 to be used with A5 HashMap implementation
-    DO NOT CHANGE THIS FUNCTION IN ANY WAY
+    Sample Hash function #2 to be used with Helpers HashMap implementation
     """
     hash, index = 0, 0
     index = 0
@@ -36,7 +31,6 @@ class HashMap:
     def __init__(self, capacity: int, function) -> None:
         """
         Init new HashMap based on DA with SLL for collision resolution
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.buckets = DynamicArray()
         for _ in range(capacity):
@@ -48,7 +42,6 @@ class HashMap:
     def __str__(self) -> str:
         """
         Return content of hash map t in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = ''
         for i in range(self.buckets.length()):

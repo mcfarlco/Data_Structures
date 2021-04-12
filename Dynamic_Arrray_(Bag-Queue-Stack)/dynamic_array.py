@@ -1,9 +1,6 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 2.1
+# Name: Corey McFarland
 # Description: Implement a Dynamic Array
 # Last revised: 10/27/20
-
 
 from static_array import *
 
@@ -11,7 +8,6 @@ from static_array import *
 class DynamicArrayException(Exception):
     """
     Custom exception class to be used by Dynamic Array
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     pass
 
@@ -20,7 +16,6 @@ class DynamicArray:
     def __init__(self, start_array=None):
         """
         Initialize new dynamic array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.size = 0
         self.capacity = 4
@@ -28,7 +23,6 @@ class DynamicArray:
         self.data = StaticArray(self.capacity)
 
         # populate dynamic array with initial values (if provided)
-        # before using this feature, implement append() method
         if start_array is not None:
             for value in start_array:
                 self.append(value)
@@ -36,7 +30,6 @@ class DynamicArray:
     def __str__(self) -> str:
         """
         Return content of dynamic array in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = "DYN_ARR Size/Cap: "
         out += str(self.size) + "/" + str(self.capacity) + ' ['
@@ -46,20 +39,18 @@ class DynamicArray:
     def is_empty(self) -> bool:
         """
         Return True is array is empty / False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.size == 0
 
     def length(self) -> int:
         """
         Return number of elements stored in array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.size
 
     def resize(self, new_capacity: int) -> None:
         """
-        Internal function to increase the capacity of the provided DynamicArray to the provided amount.
+        Internal method to increase the capacity of the provided DynamicArray to the provided amount.
         """
 
         # Checks for invalid inputs
@@ -85,7 +76,7 @@ class DynamicArray:
 
     def append(self, value: object) -> None:
         """
-        Function to add a user provided element to the end of a provided DynamicArray, increasing capacity as needed.
+        Method to add a user provided element to the end of a provided DynamicArray, increasing capacity as needed.
         """
 
         # Do nothing if an element containing None is passed
@@ -109,14 +100,14 @@ class DynamicArray:
 
     def insert_at_index(self, index: int, value: object) -> None:
         """
-        Function to insert a provided element to a provided index within the provided DynamicArray.
+        Method to insert a provided element to a provided index within the provided DynamicArray.
         """
 
         # Check for value index
         if index > self.size or index < 0:
             raise DynamicArrayException
 
-        # If index is at the end of the list, send to append function.
+        # If index is at the end of the list, send to append method.
         if index == self.size:
             self.append(value)
             return
@@ -152,7 +143,7 @@ class DynamicArray:
 
     def get_at_index(self, index: int) -> object:
         """
-        Function to return data value from a DynamicArray at the provided index.
+        Method to return data value from a DynamicArray at the provided index.
         """
 
         # Check for invalid index
@@ -163,7 +154,7 @@ class DynamicArray:
 
     def remove_at_index(self, index: int) -> None:
         """
-        Function to delete an element of a DynamicArray at the provided index.
+        Method to delete an element of a DynamicArray at the provided index.
         """
 
         # Check for valid index
@@ -204,7 +195,7 @@ class DynamicArray:
 
     def slice(self, start_index: int, quantity: int) -> object:
         """
-        Function to return a new DynamicArray of a slice of the provided DynamicArray.
+        Method to return a new DynamicArray of a slice of the provided DynamicArray.
         """
 
         # Check to invalid index
@@ -225,7 +216,7 @@ class DynamicArray:
 
     def merge(self, second_da: object) -> None:
         """
-        Function to append each element of a DynamicArray to the initial array.
+        Method to append each element of a DynamicArray to the initial array.
         """
 
         for i in range(second_da.size):
@@ -235,7 +226,7 @@ class DynamicArray:
 
     def map(self, map_func) -> object:
         """
-        Function to create a new Dynamic array that applies a provided map function to the provided DynamicArray
+        Method to create a new Dynamic array that applies a provided map function to the provided DynamicArray
         """
 
         map_arr = DynamicArray()
@@ -246,7 +237,7 @@ class DynamicArray:
 
     def filter(self, filter_func) -> object:
         """
-        Function to create a new Dynamic array consisting of true values of a provided filter function.
+        Method to create a new Dynamic array consisting of true values of a provided filter function.
         """
 
         filter_arr = DynamicArray()
@@ -258,7 +249,7 @@ class DynamicArray:
 
     def reduce(self, reduce_func, initializer=None) -> object:
         """
-        Function to apply a reduce function to a provided array, utilizing a provided initalizer as needed.
+        Method to apply a reduce function to a provided array, utilizing a provided initalizer as needed.
         """
 
         # If array is empty, return value of initializer

@@ -1,16 +1,11 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 4.1
-# Description: To implement at BST.
+# Name: Corey McFarland
+# Description: To implement at binary search tree (BST).
 
 
 class Stack:
     """
     Class implementing STACK ADT.
     Supported methods are: push, pop, top, is_empty
-
-    DO NOT CHANGE THIS CLASS IN ANY WAY
-    YOU ARE ALLOWED TO CREATE AND USE OBJECTS OF THIS CLASS IN YOUR SOLUTION
     """
     def __init__(self):
         """ Initialize empty stack based on Python list """
@@ -42,9 +37,6 @@ class Queue:
     """
     Class implementing QUEUE ADT.
     Supported methods are: enqueue, dequeue, is_empty
-
-    DO NOT CHANGE THIS CLASS IN ANY WAY
-    YOU ARE ALLOWED TO CREATE AND USE OBJECTS OF THIS CLASS IN YOUR SOLUTION
     """
     def __init__(self):
         """ Initialize empty queue based on Python list """
@@ -71,12 +63,10 @@ class Queue:
 class TreeNode:
     """
     Binary Search Tree Node class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     def __init__(self, value: object) -> None:
         """
         Init new Binary Search Tree
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.value = value          # to store node's data
         self.left = None            # pointer to root of left subtree
@@ -90,7 +80,6 @@ class BST:
     def __init__(self, start_tree=None) -> None:
         """
         Init new Binary Search Tree
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.root = None
 
@@ -103,7 +92,6 @@ class BST:
     def __str__(self) -> str:
         """
         Return content of BST in human-readable form using in-order traversal
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         values = []
         self._str_helper(self.root, values)
@@ -112,7 +100,6 @@ class BST:
     def _str_helper(self, cur, values):
         """
         Helper method for __str__. Does in-order tree traversal
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         # base case
         if cur is None:
@@ -123,8 +110,6 @@ class BST:
         values.append(str(cur.value))
         # recursive case for right subtree
         self._str_helper(cur.right, values)
-
-    # ------------------------------------------------------------------ #
 
     def add(self, value: object) -> None:
         """

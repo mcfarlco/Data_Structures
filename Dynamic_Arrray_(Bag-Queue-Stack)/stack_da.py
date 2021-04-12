@@ -1,6 +1,4 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 2.3
+# Name: Corey McFarland
 # Description: To implement a Stack ADT utilizing DynamicArray
 # Last revised: 10/27/20
 
@@ -10,7 +8,6 @@ from dynamic_array import *
 class StackException(Exception):
     """
     Custom exception to be used by Stack class
-    DO NOT CHANGE THIS METHOD IN ANY WAY
     """
     pass
 
@@ -19,14 +16,12 @@ class Stack:
     def __init__(self):
         """
         Init new stack based on Dynamic Array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.da = DynamicArray()
 
     def __str__(self) -> str:
         """
         Return content of stack in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = "STACK: " + str(self.da.length()) + " elements. ["
         out += ', '.join([str(self.da.get_at_index(_))
@@ -36,14 +31,12 @@ class Stack:
     def is_empty(self) -> bool:
         """
         Return True is the stack is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.da.is_empty()
 
     def size(self) -> int:
         """
         Return number of elements currently in the stack
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.da.length()
 

@@ -1,6 +1,4 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 2.2
+# Name: Corey McFarland
 # Description: Implementation of a Bag ADT utilizing DynamicArray
 # Last revised: 10/27/2020
 
@@ -11,12 +9,10 @@ class Bag:
     def __init__(self, start_bag=None):
         """
         Init new bag based on Dynamic Array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.da = DynamicArray()
 
         # populate bag with initial values (if provided)
-        # before using this feature, implement add() method
         if start_bag is not None:
             for value in start_bag:
                 self.add(value)
@@ -24,7 +20,6 @@ class Bag:
     def __str__(self) -> str:
         """
         Return content of stack in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = "BAG: " + str(self.da.length()) + " elements. ["
         out += ', '.join([str(self.da.get_at_index(_))
@@ -34,7 +29,6 @@ class Bag:
     def size(self) -> int:
         """
         Return total number of items currently in the bag
-        DO NOT CHANGE THIS CLASS IN ANY WAY
         """
         return self.da.length()
 

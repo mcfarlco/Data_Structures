@@ -1,6 +1,4 @@
-# Course: CS261 - Data Structures
 # Author: Corey McFarland
-# Assignment: 6.1
 # Description: To implement an Undirected Graph
 
 
@@ -16,7 +14,6 @@ class UndirectedGraph:
     def __init__(self, start_edges=None):
         """
         Store graph info as adjacency list
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.adj_list = dict()
 
@@ -29,7 +26,6 @@ class UndirectedGraph:
     def __str__(self):
         """
         Return content of the graph in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = [f'{v}: {self.adj_list[v]}' for v in self.adj_list]
         out = '\n  '.join(out)
@@ -37,8 +33,6 @@ class UndirectedGraph:
             out = out.replace('\n  ', ', ')
             return f'GRAPH: {{{out}}}'
         return f'GRAPH: {{\n  {out}}}'
-
-    # ------------------------------------------------------------------ #
 
     def add_vertex(self, v: str) -> None:
         """

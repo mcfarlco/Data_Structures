@@ -1,13 +1,10 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 3.3
+# Name: Corey McFarland
 # Description: To implement a Deque and Bag ADT with a circular doubly linked list.
 
 
 class CDLLException(Exception):
     """
     Custom exception class to be used by Circular Doubly Linked List
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     pass
 
@@ -15,7 +12,6 @@ class CDLLException(Exception):
 class DLNode:
     """
     Doubly Linked List Node class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
 
     def __init__(self, value: object) -> None:
@@ -28,7 +24,6 @@ class CircularList:
     def __init__(self, start_list=None):
         """
         Initializes a new linked list with sentinel
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.sentinel = DLNode(None)
         self.sentinel.next = self.sentinel
@@ -43,7 +38,6 @@ class CircularList:
     def __str__(self) -> str:
         """
         Return content of singly linked list in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = 'CDLL ['
         if self.sentinel.next != self.sentinel:
@@ -68,8 +62,6 @@ class CircularList:
         >= 0 - length of the list
         -1 - list likely has an infinite loop (forward or backward)
         -2 - list has some other kind of problem
-
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
 
         # length of the list measured traversing forward
@@ -96,11 +88,8 @@ class CircularList:
     def is_empty(self) -> bool:
         """
         Return True is list is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.sentinel.next == self.sentinel
-
-    # ------------------------------------------------------------------ #
 
     def add_front(self, value: object) -> None:
         """

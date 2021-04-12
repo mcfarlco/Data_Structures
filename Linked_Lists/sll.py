@@ -1,13 +1,10 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 3.1
+# Name: Corey McFarland
 # Description: To implement Deque and Bag ADTs with a singly linked list.
 
 
 class SLLException(Exception):
     """
     Custom exception class to be used by Singly Linked List
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     pass
 
@@ -15,7 +12,6 @@ class SLLException(Exception):
 class SLNode:
     """
     Singly Linked List Node class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     def __init__(self, value: object) -> None:
         self.next = None
@@ -26,7 +22,6 @@ class LinkedList:
     def __init__(self, start_list=None):
         """
         Initializes a new linked list with front and back sentinels
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.head = SLNode(None)
         self.tail = SLNode(None)
@@ -41,7 +36,6 @@ class LinkedList:
     def __str__(self) -> str:
         """
         Return content of singly linked list in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = 'SLL ['
         if self.head.next != self.tail:
@@ -56,7 +50,6 @@ class LinkedList:
     def length(self) -> int:
         """
         Return the length of the linked list
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         length = 0
         cur = self.head
@@ -68,11 +61,8 @@ class LinkedList:
     def is_empty(self) -> bool:
         """
         Return True is list is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.head.next == self.tail
-
-    # ------------------------------------------------------------------ #
 
     def add_front(self, value: object) -> None:
         """
@@ -123,8 +113,6 @@ class LinkedList:
         new_node.next = cur_node.next
         cur_node.next = new_node
 
-
-
     def remove_front(self) -> None:
         """
         Method to remove first node in a linked list
@@ -136,7 +124,6 @@ class LinkedList:
 
         # Remove first node
         self.head.next = self.head.next.next
-
 
     def remove_back(self) -> None:
         """
@@ -156,7 +143,6 @@ class LinkedList:
 
         # Remove last node.
         cur_node.next = self.tail
-
 
     def remove_at_index(self, index: int) -> None:
         """

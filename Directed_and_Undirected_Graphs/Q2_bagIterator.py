@@ -1,4 +1,5 @@
 # Name: Corey McFarland
+# Description: Implement a bag iterator.
 
 class _bagIterator:
     def __init__(self, theList):

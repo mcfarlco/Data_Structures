@@ -1,8 +1,5 @@
-# Course: CS261 - Data Structures
-# Student Name: Corey McFarland
-# Assignment: 3.2
+# Name: Corey McFarland
 # Description: To implement a Stack ADT using a linked list.
-
 
 from sll import *
 
@@ -10,7 +7,6 @@ from sll import *
 class StackException(Exception):
     """
     Custom exception to be used by MaxStack Class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     pass
 
@@ -19,7 +15,6 @@ class MaxStack:
     def __init__(self):
         """
         Init new MaxStack based on Singly Linked Lists
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.sll_val = LinkedList()
         self.sll_max = LinkedList()
@@ -27,7 +22,6 @@ class MaxStack:
     def __str__(self) -> str:
         """
         Return content of stack in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = "MAX STACK: " + str(self.sll_val.length()) + " elements. "
         out += str(self.sll_val)
@@ -36,18 +30,15 @@ class MaxStack:
     def is_empty(self) -> bool:
         """
         Return True is Maxstack is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.sll_val.is_empty()
 
     def size(self) -> int:
         """
         Return number of elements currently in the MaxStack
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self.sll_val.length()
 
-    # ------------------------------------------------------------------ #
 
     def push(self, value: object) -> None:
         """

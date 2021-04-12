@@ -1,11 +1,10 @@
-# Course: CS261 - Data Structures
+# Following code provided by school
 # Description: Static Array class
 
 
 class StaticArrayException(Exception):
     """
     Custom exception for Static Array class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
     pass
 
@@ -14,10 +13,6 @@ class StaticArray:
     """
     Class that implements Static Array Data Structure
     Implemented methods: init, get, set, size
-
-
-    DO NOT CHANGE THIS CLASS IN ANY WAY
-    YOU ARE ALLOWED TO CREATE AND USE OBJECTS OF THIS CLASS IN YOUR SOLUTION
     """
 
     def __init__(self, size=10):
